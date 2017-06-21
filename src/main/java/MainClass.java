@@ -7,14 +7,20 @@ public class MainClass {
     public static void main(String[] args) {
         String CSVfilename;
         String filedir;
-        int threadNum;
+        int threadNum=0;
         if (args.length != 3) {
             System.out.println("Wrong number of arguments.\n !Notice: CSVfilename FileDirectory NumberOfThreads");
             System.exit(0);
         }
         CSVfilename = args[0];
         filedir = args[1];
-        threadNum = Integer.parseInt(args[2]);
+        try {
+            threadNum = Integer.parseInt(args[2]);
+        }catch (NumberFormatException e)
+        {
+            System.out.println("Wrong thread num");
+            System.exit(0);
+        }
         if (threadNum <= 0) {
             System.out.println("Wrong thread num");
             System.exit(0);
