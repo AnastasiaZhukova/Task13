@@ -9,7 +9,7 @@ public class MainClass {
         String filedir;
         int threadNum;
         if (args.length != 3) {
-            System.out.println("Wrong number of arguments.\n !Notice: FileDirectory NumberOfThreads");
+            System.out.println("Wrong number of arguments.\n !Notice: CSVfilename FileDirectory NumberOfThreads");
             System.exit(0);
         }
         CSVfilename = args[0];
